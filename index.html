@@ -1,0 +1,28 @@
+﻿<html>
+<head>
+    <title>Angular Material Toast Service</title>
+    <link href="Content/angular-material-css/angular-material.css" rel="stylesheet" />
+
+    <script src="Scripts/lib/angular/angular.js"></script>
+    <script src="Scripts/lib/angular-material/angular-material.js"></script>
+    <script src="Scripts/lib/angular-animate/angular-animate.js"></script>
+    <script src="Scripts/lib/angular-aria/angular-aria.js"></script>
+
+    <script src="Scripts/app/app.js"></script>
+    <script src="Scripts/app/toastAlertService.js"></script>
+</head>
+<body ng-app="app" class="ng-cloak">
+    <div ng-controller="toastController as vm">
+        <br /><br /><br />
+        <input type="button" ng-click="vm.defaultToaster()" value="Default Toaster" />
+        <br /><br />
+        <input type="button" ng-click="vm.customToaster()" value="Custom Toaster" />
+        <br /><br /><br /><br /><br />
+    </div>
+    <div id="footer">
+        <div class="container">
+            <span class="pull-right text-info credit">Muhammad Hassan Tariq - <a href="https://hassantariqblog.wordpress.com" target="_blank">Website</a> - <a href="https://twitter.com/Hasan_Tariq" target="_blank">Twitter</a></span>
+        </div>
+    </div>
+</body>
+</html>
