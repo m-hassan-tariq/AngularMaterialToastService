@@ -7,69 +7,69 @@ Github Link
 
 Angular Code:
 
-(function () {
-    'use strict';
-
-    var app = angular.module('app', ['ngMaterial']);
-
-    app.controller('toastController', function (toastAlert) {
-
-        var vm = this;
-        
-        vm.defaultToaster = function () {
-            toastAlert.defaultToaster('Toast Activated');
-        };
-
-        vm.customToaster = function () {
-            toastAlert.customToaster('Toast Activated', '3000', 'bottom left');
-        };
-    });
-
-})();
+    (function () {
+        'use strict';
+    
+        var app = angular.module('app', ['ngMaterial']);
+    
+        app.controller('toastController', function (toastAlert) {
+    
+            var vm = this;
+            
+            vm.defaultToaster = function () {
+                toastAlert.defaultToaster('Toast Activated');
+            };
+    
+            vm.customToaster = function () {
+                toastAlert.customToaster('Toast Activated', '3000', 'bottom left');
+            };
+        });
+    
+    })();
 
 Toaster Service:
 
-(function () {
-    'use strict';
-
-    angular
-        .module('app')
-        .factory('toastAlert', toastAlert);
-
-    toastAlert.$inject = ['$mdToast'];
-
-    function toastAlert($mdToast) {
-
-        var service = {
-            customToaster: customToaster,
-            defaultToaster: defaultToaster
-        };
-
-        return service;
-
-        ////////////////////////////Implementation//////////////////////////////////////
-
-        function customToaster(content , delay, position) {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent(content)
-                .position(position)
-                .hideDelay(delay)
-            );
+    (function () {
+        'use strict';
+    
+        angular
+            .module('app')
+            .factory('toastAlert', toastAlert);
+    
+        toastAlert.$inject = ['$mdToast'];
+    
+        function toastAlert($mdToast) {
+    
+            var service = {
+                customToaster: customToaster,
+                defaultToaster: defaultToaster
+            };
+    
+            return service;
+    
+            ////////////////////////////Implementation//////////////////////////////////////
+    
+            function customToaster(content , delay, position) {
+                $mdToast.show(
+                  $mdToast.simple()
+                    .textContent(content)
+                    .position(position)
+                    .hideDelay(delay)
+                );
+            }
+    
+            function defaultToaster(content) {
+                $mdToast.show(
+                  $mdToast.simple()
+                    .textContent(content)
+                    .position('bottom right')
+                    .hideDelay(3000)
+                );
+            }
         }
-
-        function defaultToaster(content) {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent(content)
-                .position('bottom right')
-                .hideDelay(3000)
-            );
-        }
-    }
-})();
+    })();
 
  
+![screenshot_1](https://cloud.githubusercontent.com/assets/10474169/13370494/6badffcc-dcce-11e5-9ddd-16ed01fcfefc.png)
 
-Screenshot_1
 
