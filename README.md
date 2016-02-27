@@ -1,9 +1,7 @@
 # Angular Material Toast Service
 Custom toast service using Angular Material 
 
-Customize Angular toast service, register within your controller and other data services and use it throughout your project. For html code clone my repo from github.
-
-Github Link
+Customize Angular toast service, register within your controller and other data services and use it throughout your project. 
 
 Angular Code:
 
