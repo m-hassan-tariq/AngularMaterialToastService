@@ -69,6 +69,7 @@ Toaster Service:
         }
     })();
 
+Output:
  
 ![screenshot_1](https://cloud.githubusercontent.com/assets/10474169/13370494/6badffcc-dcce-11e5-9ddd-16ed01fcfefc.png)
 
